@@ -1,12 +1,21 @@
 package Cylinder;
 
+import CarpetCostCalculator.Calculator;
+import CarpetCostCalculator.Carpet;
+import CarpetCostCalculator.Floor;
+
+import java.sql.SQLOutput;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Cylinder cylinder = new Cylinder(5.55,7.25);
+        Floor floor = new Floor(4,6);
+        Carpet carpet =  new Carpet(6);
 
-        System.out.println(cylinder.getVolume());
+        Calculator calculator = new Calculator(floor,carpet);
+
+        System.out.println(calculator.getTotalCost());
 
 
 
